@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGE Consultoría Eléctrica</title>
+    <meta name="description" content="Empresa dedicada a ofrecer servicios profesionales de calidad. Conócenos y descubre cómo podemos ayudarte.">
+    <link rel="icon" href="fav.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        primary: '#062448',
+                        secondary: '#137cbd',
+                        accent: '#246084',
+                        light: '#f3fbfd',
+                        textdark: '#13405d'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-textdark bg-light overflow-x-hidden">
+    <!-- Header -->
+    <header class="bg-white shadow-md w-full fixed top-0 left-0 w-full z-50 overflow-x-hidden">
+        <nav class="w-full mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#inicio" class="flex items-center space-x-2">
+                <img src="./assets/img/logo.png" alt="Logo" class="h-10 w-auto max-w-full">
+            </a>
+
+            <!-- Menu Desktop -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#inicio" class="hover:text-secondary transition">Inicio</a></li>
+                <li><a href="#servicios" class="hover:text-secondary transition">Servicios</a></li>
+                <li><a href="#nosotros" class="hover:text-secondary transition">Nosotros</a></li>
+                <li><a href="#contacto" class="hover:text-secondary transition">Contacto</a></li>
+            </ul>
+
+            <!-- Botón Menu Móvil -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-secondary focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menu Móvil -->
+        <div id="mobile-menu" class="hidden bg-white md:hidden shadow-md w-full">
+            <ul class="flex flex-col items-center space-y-4 py-4 w-full">
+                <li><a href="#inicio" class="hover:text-secondary mobile-link">Inicio</a></li>
+                <li><a href="#servicios" class="hover:text-secondary mobile-link">Servicios</a></li>
+                <li><a href="#nosotros" class="hover:text-secondary mobile-link">Nosotros</a></li>
+                <li><a href="#contacto" class="hover:text-secondary mobile-link">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/img/hero.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary opacity-80"></div>
+
+        <div class="relative z-10 px-6 reveal opacity-0 translate-y-10 transition-all duration-700">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Bienvenido a <br><span class="text-light">AGE Consultoría Eléctrica</span></h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">Ingeniería eléctrica confiable para decisiones técnicas claras.</p>
+            <a href="#contacto" class="inline-block bg-white hover:bg-tertiary text-primary px-8 py-3 rounded-lg font-semibold transition">Contáctanos</a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 bg-light">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+
+            <h2 class="text-3xl font-bold text-primary mb-12 reveal opacity-0 translate-y-10 transition-all duration-700">
+                Nuestros Servicios
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+                
+                <!-- Tarjeta -->
+                <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition reveal opacity-0 translate-y-10 scale-95 duration-700">
+                    <img src="./assets/img/Ingenieria-de-Proyectos-Electricos.jpg" class="max-w-full h-auto object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-secondary">Ingeniería de Proyectos Eléctricos</h3>
+                    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat dolor non nisi dignissim, ut auctor ante feugiat. Integer suscipit orci arcu, in ullamcorper tortor aliquet eu. Suspendisse pharetra lectus leo. Nam suscipit, lacus ac commodo malesuada, metus lorem laoreet augue, ut bibendum nunc est id libero</p>
+                </div>
+
+                <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition reveal opacity-0 translate-y-10 scale-95 duration-700">
+                    <img src="./assets/img/Instalaciones-Electricas-Industriales.jpeg" class="max-w-full h-auto object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-secondary">Instalaciones Eléctricas Industriales</h3>
+                    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat dolor non nisi dignissim, ut auctor ante feugiat. Integer suscipit orci arcu, in ullamcorper tortor aliquet eu. Suspendisse pharetra lectus leo. Nam suscipit, lacus ac commodo malesuada, metus lorem laoreet augue, ut bibendum nunc est id libero</p>
+                </div>
+
+                <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition reveal opacity-0 translate-y-10 scale-95 duration-700">
+                    <img src="./assets/img/Estudios-Electricos-Especializados.png" class="max-w-full h-auto object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-secondary">Estudios Eléctricos Especializados</h3>
+                    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat dolor non nisi dignissim, ut auctor ante feugiat. Integer suscipit orci arcu, in ullamcorper tortor aliquet eu. Suspendisse pharetra lectus leo. Nam suscipit, lacus ac commodo malesuada, metus lorem laoreet augue, ut bibendum nunc est id libero</p>
+                </div>
+
+                <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition reveal opacity-0 translate-y-10 scale-95 duration-700">
+                    <img src="./assets/img/Tramites-Tecnicos-con-Empresas-Suministradoras.jpg" class="max-w-full h-auto object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-secondary">Trámites Técnicos con Empresas Suministradoras</h3>
+                    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat dolor non nisi dignissim, ut auctor ante feugiat. Integer suscipit orci arcu, in ullamcorper tortor aliquet eu. Suspendisse pharetra lectus leo. Nam suscipit, lacus ac commodo malesuada, metus lorem laoreet augue, ut bibendum nunc est id libero</p>
+                </div>
+
+                <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition reveal opacity-0 translate-y-10 scale-95 duration-700">
+                    <img src="./assets/img/Mantenimiento-a-Subestaciones-Electricas.png" class="max-w-full h-auto object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-secondary">Mantenimiento a Subestaciones Eléctricas</h3>
+                    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat dolor non nisi dignissim, ut auctor ante feugiat. Integer suscipit orci arcu, in ullamcorper tortor aliquet eu. Suspendisse pharetra lectus leo. Nam suscipit, lacus ac commodo malesuada, metus lorem laoreet augue, ut bibendum nunc est id libero</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Imagen -->
+            <div class="reveal opacity-0 -translate-x-10 transition-all duration-700">
+                <img src="./assets/img/nosotros.jpg" alt="Nosotros" class="rounded-xl shadow-lg object-cover">
+            </div>
+
+            <!-- Textos -->
+            <div class="reveal opacity-0 translate-y-10 transition-all duration-700">
+                <h2 class="text-3xl font-bold text-primary mb-6">Sobre Nosotros</h2>
+
+                <h3 class="text-xl font-semibold text-secondary mb-2">Quiénes Somos</h3>
+                <p class="text-gray-700 text-sm mb-6">
+                    Somos una firma orientada al diseño, evaluación y diagnóstico de instalaciones eléctricas en baja, media y alta tensión. <br>
+                    Nuestros trabajaos se ejecutan bajo cumplimiento normativo nacional (NOM, NEC y siguiendo recomendaciones internacionales (IEEE, IEC) asegurando instalaciones seguras, confiables y aptas para procesos continuos.
+                </p>
+
+                <h3 class="text-xl font-semibold text-secondary mb-2">Misión</h3>
+                <p class="text-gray-700 text-sm mb-6">
+                    Brindar soluciones integrales en ingeniería eléctrica, garantizando seguridad, confiabilidad y operatividad de los sistemas eléctricos.
+                </p>
+
+                <h3 class="text-xl font-semibold text-secondary mb-2">Visión</h3>
+                <p class="text-gray-700 text-sm">
+                    Ser una referencia nacional en consultoría eléctrica, reconocida por rigor técnico, cumplimiento normativo y la innovación en estudios, proyectos y diagnósticos eléctricos orientados a la eficiencia y seguridad operativa.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-light">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+
+            <div class="reveal opacity-0 translate-y-10 transition-all duration-700">
+                <h2 class="text-3xl font-bold text-primary mb-6">Contáctanos</h2>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Nombre" class="w-full border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-secondary" required>
+                    <input type="email" placeholder="Correo electrónico" class="w-full border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-secondary" required>
+                    <textarea placeholder="Mensaje" rows="4" class="w-full border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-secondary" required></textarea>
+                    <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-accent transition">Enviar</button>
+                </form>
+            </div>
+
+            <div class="space-y-4 reveal opacity-0 translate-y-10 transition-all duration-700">
+                <img src="./assets/img/logo.png" alt="Logo" class="h-25 w-auto">
+                
+                <p class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary fill-current" viewBox="0 0 448 512">
+                        <path d="M92.1 254.6c0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6 49.9-13.1 4.8 2.9c20.2 12 43.4 18.4 67.1 18.4l.1 0c72.6 0 133.3-59.1 133.3-131.8 0-35.2-15.2-68.3-40.1-93.2-25-25-58-38.7-93.2-38.7-72.7 0-131.8 59.1-131.9 131.8zM274.8 330c-12.6 1.9-22.4 .9-47.5-9.9-36.8-15.9-61.8-51.5-66.9-58.7-.4-.6-.7-.9-.8-1.1-2-2.6-16.2-21.5-16.2-41 0-18.4 9-27.9 13.2-32.3 .3-.3 .5-.5 .7-.8 3.6-4 7.9-5 10.6-5 2.6 0 5.3 0 7.6 .1l.8 0c2.3 0 5.2 0 8.1 6.8 1.2 2.9 3 7.3 4.9 11.8 3.3 8 6.7 16.3 7.3 17.6 1 2 1.7 4.3 .3 6.9-3.4 6.8-6.9 10.4-9.3 13-3.1 3.2-4.5 4.7-2.3 8.6 15.3 26.3 30.6 35.4 53.9 47.1 4 2 6.3 1.7 8.6-1 2.3-2.6 9.9-11.6 12.5-15.5 2.6-4 5.3-3.3 8.9-2s23.1 10.9 27.1 12.9c.8 .4 1.5 .7 2.1 1 2.8 1.4 4.7 2.3 5.5 3.6 .9 1.9 .9 9.9-2.4 19.1-3.3 9.3-19.1 17.7-26.7 18.8zM448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM148.1 393.9L64 416 86.5 333.8c-13.9-24-21.2-51.3-21.2-79.3 .1-87.4 71.2-158.5 158.6-158.5 42.4 0 82.2 16.5 112.2 46.5 29.9 30 47.9 69.8 47.9 112.2 0 87.4-72.7 158.5-160.1 158.5-26.6 0-52.7-6.7-75.8-19.3z"/>
+                    </svg>
+                    <span>871 504 9474</span>
+                </p>
+
+                <p class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary fill-current" viewBox="0 0 512 512">
+                        <path d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"/>
+                    </svg>
+                    <span>alejandro.aguilar@consultoriaage.com</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light text-center py-6">
+        <p>© 2025 Aguilar Gestión Eléctrica. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JS menu movil -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        links.forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
+    </script>
+
+    <!-- Scroll Animation -->
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10', '-translate-x-10', 'scale-95');
+                    entry.target.classList.add('opacity-100', 'translate-y-0', 'translate-x-0', 'scale-100');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
